@@ -12,6 +12,8 @@ const getCategorias = async (req, res) => {
 
 // Crear categoría
 const crearCategoria = async (req, res) => {
+  console.log("REQ BODY LLEGA:", req.body);
+
   const { nombre } = req.body;
   if (!nombre) return res.status(400).json({ message: 'Nombre es obligatorio' });
 
